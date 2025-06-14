@@ -14,7 +14,7 @@ function scrollByPixels(pixels) {
   });
 }
 
-// Массив с данными процессоров
+// Массив с данными процессоров я хз как это будет работать на практике, но в моей голове все идеально
 const processors = [
   {
     name: "Процессор AMD A6-7480 OEM",
@@ -47,7 +47,7 @@ const processors = [
   },
 ];
 
-// Функция для создания карточек процессоров
+// Функция для создания карточек процессоров, убейте меня
 function createProcessorCards() {
   const container = document.getElementById("processors-container");
 
@@ -238,3 +238,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+    function copyToClipboard(id) {
+        const element = document.getElementById(id);
+        const range = document.createRange();
+        range.selectNode(element);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        try {
+            document.execCommand('copy');
+            alert('Данные успешно скопированы!');
+        } catch(err) {
+            alert('Ошибка копирования.');
+        }
+        window.getSelection().removeAllRanges();
+    }
