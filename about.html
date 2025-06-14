@@ -21,7 +21,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css"
     />
     <!-- Подключение файла со стилями -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styleabout.css" />
     <!-- Подключение скриптов  -->
     <script src="script.js"></script>
   </head>
@@ -59,3 +59,32 @@
         </div>
       </div>
     </header>
+
+<body>
+
+<h1>Информация о сайте</h1>
+
+<div class="info-block">
+    <strong>Электронная почта владельца сайта:</strong> <span id="email">support@example.com</span>
+      <button onclick="copyToClipboard('email')" class="copy-btn">Скопировать email</button>
+</div>
+
+<div class="info-block">
+    <strong>Юридический адрес владельца сайта:</strong> <span id="address">ул. Ленина, д. 1, Москва, Россия, 123456</span>
+      <button onclick="copyToClipboard('address')" class="copy-btn">Скопировать адрес</button>
+</div>
+
+<div class="info-block">
+    <strong>Ссылка на пользовательское соглашение:</strong> <a href="agreement.pdf" download>Скачать соглашение</a>
+</div>
+
+<div class="info-block">
+    <strong>Обязанности сайта по защите данных пользователей:</strong> <a href="privacy_policy.pdf" download>Скачать политику конфиденциальности</a>
+</div>
+
+<div class="info-block">
+    <strong>Связь с поддержкой сайта:</strong> <a href="mailto:support@example.com">Напишите нам письмо</a>
+</div>
+
+</body>
+</html>
