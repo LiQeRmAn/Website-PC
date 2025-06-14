@@ -2,7 +2,7 @@
 
 Website about PC Hardware, PC building with a comparison of components and a profile
 
-This website was made by LiQeRmAn using main page created by GhOsT135 (Marsel)
+This website was made by LiQeRmAn using main page created by GhOsT135 (Marsel) (https://github.com/Gh0sT135)
 
 Short view of the website:
 
