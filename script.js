@@ -228,22 +228,13 @@ function createGraphicsCardCards() {
 
 document.addEventListener("DOMContentLoaded", createGraphicsCardCards);
 
-document.addEventListener('DOMContentLoaded', function() {
-    const tabs = document.querySelectorAll('#tabs > li > a');
-    const contents = document.querySelectorAll('#content > article');
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll("nav ul li a");
 
-    tabs.forEach(tab => tab.addEventListener('click', changeTab));
-
-    function changeTab(event) {
-        event.preventDefault();
-
-        tabs.forEach(tab => tab.classList.remove('active'));
-
-        this.classList.add('active');
-
-        contents.forEach(content => content.classList.remove('show'));
-
-        let targetId = this.getAttribute('data-target');
-        document.getElementById(targetId).classList.add('show');
-    }
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            links.forEach(l => l.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
 });
