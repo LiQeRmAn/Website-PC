@@ -14,7 +14,7 @@ function scrollByPixels(pixels) {
   });
 }
 
-// Массив с данными процессоров я хз как это будет работать на практике, но в моей голове все идеально
+// Массив с данными процессоров
 const processors = [
   {
     name: "Процессор AMD A6-7480 OEM",
@@ -47,7 +47,7 @@ const processors = [
   },
 ];
 
-// Функция для создания карточек процессоров, убейте меня
+// Функция для создания карточек процессоров
 function createProcessorCards() {
   const container = document.getElementById("processors-container");
 
