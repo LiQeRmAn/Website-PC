@@ -82,7 +82,7 @@ function createProcessorCards() {
                     <div class="d-flex justify-content-between align-items-center mb-2">
                         <button class="btn btn-sm btn-outline-primary">Добавать</button>
                         <div>
-                        
+
                         <h5 class="mb-0 text-primary">${processor.price}</h5>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", createProcessorCards);
 // Массив с данными материнских плат
 const motherboards = [
     {
-        
+
         name: "Материнская плата ASUS PRIME A320M-K",
         socket: "AM4",
         formFactor: "Micro ATX",
@@ -127,11 +127,11 @@ const motherboards = [
 // Функция для создания карточек материнских плат
 function createMotherboardCards() {
     const container = document.getElementById('motherboards-container');
-    
+
     motherboards.forEach(motherboard => {
         const card = document.createElement('div');
         card.className = 'col';
-        
+
         card.innerHTML = `
             <div class="card product-card shadow-sm h-100">
                 <div class="card-body">
@@ -151,7 +151,7 @@ function createMotherboardCards() {
                 </div>
             </div>
         `;
-        
+
         container.appendChild(card);
     });
 }
@@ -197,11 +197,11 @@ const graphicsCards = [
 // Функция для создания карточек видеокарт
 function createGraphicsCardCards() {
     const container = document.getElementById('graphics-cards-container');
-    
+
     graphicsCards.forEach(graphicsCard => {
         const card = document.createElement('div');
         card.className = 'col';
-        
+
         card.innerHTML = `
             <div class="card product-card shadow-sm h-100">
                 <div class="card-body">
@@ -221,10 +221,29 @@ function createGraphicsCardCards() {
                 </div>
             </div>
         `;
-        
+
         container.appendChild(card);
     });
 }
 
-// Создаем карточки материнских плат при загрузке страницы
 document.addEventListener("DOMContentLoaded", createGraphicsCardCards);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('#tabs > li > a');
+    const contents = document.querySelectorAll('#content > article');
+
+    tabs.forEach(tab => tab.addEventListener('click', changeTab));
+
+    function changeTab(event) {
+        event.preventDefault();
+
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        this.classList.add('active');
+
+        contents.forEach(content => content.classList.remove('show'));
+
+        let targetId = this.getAttribute('data-target');
+        document.getElementById(targetId).classList.add('show');
+    }
+});
