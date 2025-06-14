@@ -98,3 +98,22 @@ nav ul li a:hover {
 
 
 }
+
+.info-block {
+            margin-bottom: 20px;
+        }
+        .copy-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .copy-btn:hover {
+            background-color: #0056B3;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: underline;
+        }
